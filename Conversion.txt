@@ -1,0 +1,3 @@
+# cat -A tonscript.sh
+# dos2unix tonscript.sh
+# cat -A tonscript.sh
