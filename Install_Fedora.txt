@@ -1,0 +1,41 @@
+$ sudo mkdir -p /mnt/NAS
+$ sudo mount -t cifs //xxx.xxx.xxx.xxx/shared_folder /mnt/NAS -o username=XXXX,password=XXXX,rw,iocharset=utf8,uid=1000,gid=1000
+$ sudo umount /mnt/NAS
+
+Suite à l'installation :
+
+1. Dans le menu Welcome quand on démarre la première fois, il faut activer les dépôts tiers.
+
+2. Ouvrir le terminal
+3. $ sudo dnf upgrade
+4. $ sudo dnf install git
+
+5. $  cd /home/sylvain
+6. $  mkdir scripts
+7. $  cd scripts
+8. $ git clone https://github.com/d2racing/fedora.org.git
+9. $  cd fedora.org
+10 $ sudo chmod +x baseinstall_part1.sh
+11.$ time sudo ./baseinstall_part1.sh
+
+Maj des flatpak :
+
+1. $ sudo  flatpak update --appstream && flatpak remote-ls --updates
+2. $ sudo flatpak update
+
+Maj sous Fedora :
+
+1. $ sudo dnf clean all
+2. $ sudo dnf makecache
+3. $ sudo dnf update
+4. $ sudo dnf upgrade
+
+
+Maj majeur sous Fedora :
+
+1. $ sudo dnf update --refresh
+2. $ sudo dnf install dnf-plugin-system-upgrade
+3. $ sudo dnf system-upgrade download --releasever=xx --allowerasing
+4. $ sudo dnf system-upgrade reboot
+5. $ cat /etc/fedora-release
+
