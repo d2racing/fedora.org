@@ -9,14 +9,15 @@ Suite à l'installation :
 2. Ouvrir le terminal
 3. $ sudo dnf upgrade
 4. $ sudo dnf install git
+5. $ reboot
 
-5. $  cd /home/sylvain
-6. $  mkdir scripts
-7. $  cd scripts
-8. $ git clone https://github.com/d2racing/fedora.org.git
-9. $  cd fedora.org
-10 $ sudo chmod +x baseinstall_part1.sh
-11.$ time sudo ./baseinstall_part1.sh
+6. $ cd /home/sylvain
+7. $ mkdir scripts
+8. $ cd scripts
+9. $ git clone https://github.com/d2racing/fedora.org.git
+10.$ cd fedora.org
+11 $ sudo chmod +x baseinstall_part1.sh
+12.$ time sudo ./baseinstall_part1.sh
 
 Maj des flatpak :
 
