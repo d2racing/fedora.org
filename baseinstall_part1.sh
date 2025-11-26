@@ -66,6 +66,9 @@ sudo dnf install -y flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub org.signal.Signal
 
+### --- Installation de Discord --- ###
+sudo dnf install -y discord
+
 ### --- Nettoyage --- ###
 sudo dnf clean all -y
 sudo dnf makecache -y
