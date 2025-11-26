@@ -8,8 +8,8 @@ Suite à l'installation :
 
 2. Ouvrir le terminal
 3. $ sudo dnf upgrade
-4. $ sudo dnf install git
-5. $ reboot
+4. $ sudo reboot
+5. $ sudo dnf install git
 
 6. $ cd /home/sylvain
 7. $ mkdir scripts
