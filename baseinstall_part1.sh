@@ -7,7 +7,7 @@ echo "=== Début de baseinstall_part1 ==="
 sudo hostnamectl set-hostname --static fedora43
 
 ### --- Packages de base --- ###
-sudo dnf install -y fastfetch
+sudo dnf install -y fastfetch fio
 sudo dnf install -y google-chrome-stable
 
 ### --- Dépôt 1Password --- ###
