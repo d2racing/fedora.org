@@ -40,3 +40,7 @@ Maj majeur sous Fedora :
 4. $ sudo dnf system-upgrade reboot
 5. $ cat /etc/fedora-release
 
+Test de vitesse SSD :
+1. $ sudo mkdir -p /mnt/ssd
+2. $ sudo fio --name=write --filename=/mnt/ssd/testfile --size=2G --bs=1M --rw=write --direct=1
+3. $ sudo fio --name=read --filename=/mnt/ssd/testfile --bs=1M --rw=read --direct=1
