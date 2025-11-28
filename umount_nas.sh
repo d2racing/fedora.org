@@ -4,7 +4,7 @@ echo 'start'
 # Démontage du NAS
 # ==========================================
 # --- CONFIGURATION ---
-SHARES=("CLONEZILLA" "DIVERS" "DONNEES" "homes" "LINUX" "LOGICIELS" "MACRIUM" "photo" "PHOTOSYNC" "STORAGE_ANALYZER")
+SHARES=("CLONEZILLA" "DIVERS" "DONNEES" "homes" "LOGICIELS" "photo" "PHOTOSYNC" "STORAGE_ANALYZER")
 NAS_MOUNT_BASE="/mnt/NAS"
 
 # --- MONTAGE ET SYNCHRONISATION ---
