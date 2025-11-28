@@ -4,7 +4,7 @@
 # ==========================================
 
 # --- CONFIGURATION ---
-NAS_IP="192.168.2.250"
+NAS_IP="xxx.xxx.x.xxx"
 CREDENTIALS_FILE="/root/.nas-credentials"  # format : username=XX_XXX / password=YYYY
 
 SHARES=("CLONEZILLA" "DIVERS" "DONNEES" "homes" "LOGICIELS" "photo" "PHOTOSYNC" "STORAGE_ANALYZER")
