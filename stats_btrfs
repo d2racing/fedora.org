@@ -1,0 +1,60 @@
+[INFO] Montage du disque /dev/sdb1 sur /mnt/backup...
+[TEMPS] Durée : 0h 0m 8s
+
+=== Vérification des données et checksums (btrfs scrub) ===
+[INFO] Taille des données : 2979.84GB
+[INFO] Estimation du temps de scrub : 5h 39m 2s (approx.)
+Starting scrub on devid 1
+
+Scrub device /dev/sdb1 (id 1) done
+Scrub started:    Fri Nov 28 01:17:02 2025
+Status:           finished
+Duration:         9:54:10
+Total to scrub:   2.84TiB
+Rate:             83.64MiB/s
+Error summary:    no errors found
+[TEMPS] Durée : 9h 54m 11s
+
+=== Résumé du dernier scrub ===
+UUID:             8ae66a0c-a1e0-458a-9e79-4decce9eee66
+Scrub started:    Fri Nov 28 01:17:02 2025
+Status:           finished
+Duration:         9:54:10
+Total to scrub:   2.84TiB
+Rate:             83.64MiB/s
+Error summary:    no errors found
+[TEMPS] Durée : 0h 0m 0s
+
+=== Liste des sous-volumes Btrfs ===
+ID 256 gen 2193 top level 5 path nas_backup
+ID 257 gen 2192 top level 256 path nas_backup/current
+ID 275 gen 2192 top level 256 path nas_backup/2025-11-28_00-58
+[TEMPS] Durée : 0h 0m 0s
+
+Voulez-vous exécuter btrfs check (long, optionnel) ? [y/N] : y
+=== Vérification structure interne (btrfs check) ===
+[1/8] checking log skipped (none written)
+[2/8] checking root items
+[3/8] checking extents
+[4/8] checking free space tree
+[5/8] checking fs roots
+[6/8] checking only csums items (without verifying data)
+[7/8] checking root refs
+[8/8] checking quota groups skipped (not enabled on this FS)
+Opening filesystem to check...
+Checking filesystem on /dev/sdb1
+UUID: 8ae66a0c-a1e0-458a-9e79-4decce9eee66
+found 3123323863040 bytes used, no error found
+total csum bytes: 3046932576
+total tree bytes: 3264905216
+total fs tree bytes: 102137856
+total extent tree bytes: 30146560
+btree space waste bytes: 77304216
+file data blocks allocated: 3120058957824
+ referenced 3120058953728
+[TEMPS] Durée : 0h 24m 45s
+[INFO] Script terminé.
+
+real    629m52,024s
+user    0m0,007s
+sys     0m0,024s
