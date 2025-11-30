@@ -17,3 +17,8 @@ for SHARE in "${SHARES[@]}"; do
     sudo mount -t cifs "//$NAS_IP/$SHARE" "$SRC" \
         -o credentials="$CREDENTIALS_FILE",rw,iocharset=utf8,vers=3.0,uid=1000,gid=1000 || { echo "Échec du montage de $SHARE"; continue; }
 done
+
+# nano /root/.nas-credential
+#username=...
+#password=...
+# chmod 600 /root/.nas-credential
