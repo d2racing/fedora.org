@@ -79,3 +79,7 @@ log "Sauvegarde terminée le $DATE"
 # cd /mnt/backup/nas_backup
 # sudo btrfs subvolume create current
 # sudo btrfs subvolume snapshot -r /mnt/backup/nas_backup/current /mnt/backup/nas_backup/20251023
+# nano /root/.nas-credential
+username=...
+password=...
+# chmod 600 /root/.nas-credential
