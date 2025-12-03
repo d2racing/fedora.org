@@ -4,7 +4,7 @@
 # ==========================================
 
 # --- CONFIGURATION ---
-NAS_IP="xxx.xxx.xxx.xxx"
+NAS_IP="XXX.XXX.XXX.XXX"
 CREDENTIALS_FILE="/root/.nas-credentials"  # format : username=XX_XXX / password=YYYY
 
 SHARES=("CLONEZILLA" "DIVERS" "DONNEES" "homes" "LOGICIELS" "photo" "PHOTOSYNC" "STORAGE_ANALYZER")
@@ -46,7 +46,9 @@ for SHARE in "${SHARES[@]}"; do
     log ">>> Montage de $SHARE..."
     sudo mkdir -p "$SRC" "$DEST"
 
-    sudo mount -t cifs "//$NAS_IP/$SHARE" "$SRC" -o credentials="$CREDENTIALS_FILE",rw,iocharset=utf8,vers=3.0 || { log "Échec du montage de $SHARE"; continue; }
+    # --- MODIFICATION ICI : arrêt du script en cas d'erreur de montage ---
+    sudo mount -t cifs "//$NAS_IP/$SHARE" "$SRC" -o credentials="$CREDENTIALS_FILE",rw,iocharset=utf8,vers=3.0 \
+        || { log "Échec du montage de $SHARE — arrêt du script !"; exit 1; }
 
     log ">>> Synchronisation de $SHARE..."
     sudo rsync -aHAX --no-xattrs --delete \
@@ -72,14 +74,10 @@ done
 
 log "Sauvegarde terminée le $DATE"
 
-# sudo mkdir -p /mnt/backup
-# sudo mount /dev/sdb1 /mnt/backup
-# cd /mnt/backup
-# sudo btrfs subvolume create nas_backup
-# cd /mnt/backup/nas_backup
-# sudo btrfs subvolume create current
+# sudo mkdir -p /mnt/backup 
+# sudo mount /dev/sdb1 /mnt/backup 
+# cd /mnt/backup 
+# sudo btrfs subvolume create nas_backup 
+# cd /mnt/backup/nas_backup 
+# sudo btrfs subvolume create current 
 # sudo btrfs subvolume snapshot -r /mnt/backup/nas_backup/current /mnt/backup/nas_backup/20251023
-# nano /root/.nas-credential
-#username=...
-#password=...
-# chmod 600 /root/.nas-credential
